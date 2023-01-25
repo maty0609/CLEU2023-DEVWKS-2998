@@ -17,5 +17,5 @@ In his session we will go through the Flux architecture, configuration and deplo
 ```
 chuck-norris-app-src - source code of Chuck Norris App
 env - Kubernetes manifests to deploy Chuck Norris App
-workshop - Content used in the workshop at cleu2023
+workshop - Content used in the workshop at Cisco Live! Amsterdam 2023
 ```

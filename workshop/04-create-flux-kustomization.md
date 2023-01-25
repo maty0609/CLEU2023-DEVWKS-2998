@@ -10,7 +10,7 @@ The Kustomization custom resource represents a local set of Kubernetes resources
 
 The reconciliation runs every one minute by default, but this can be changed with `.spec.interval`. If you make any changes to the cluster using `kubectl` apply/edit/patch/delete, they will be promptly reverted. You either suspend the reconciliation or push your changes to a Git repository.
 
-`Dev` GitRepositories that you have created earlier contains the Kustomize overlays for both environments. Within each GitRepository, the path to the Kustomize overlay will vary. For `dev` environment (`CLUS2022-DEVWKS-2998` repository `dev` branch), the path is `env/dev`. For `prod` environment (`CLUS2022-DEVWKS-2998` repository `main` branch), the path is `env/prod`.
+`Dev` GitRepositories that you have created earlier contains the Kustomize overlays for both environments. Within each GitRepository, the path to the Kustomize overlay will vary. For `dev` environment (`CLEU2023-DEVWKS-2998` repository `dev` branch), the path is `env/dev`. For `prod` environment (`CLEU2023-DEVWKS-2998` repository `main` branch), the path is `env/prod`.
 
 Let's create the corresponding Kustomization resources and start with `prod` environment. Run the following command:
 ```bash
@@ -78,7 +78,7 @@ tree /home/developer/src/natilik-fleet
 ```
 /home/developer/natilik-fleet
 └── clusters
-    └── clus2022
+    └── cleu2023
         ├── apps
         │   ├── dev.yaml
         │   └── prod.yaml
@@ -88,7 +88,7 @@ tree /home/developer/src/natilik-fleet
             └── kustomization.yaml
 ```
 
-What you have done so far is only creating a set of local YAML files to configure Flux. The next step is to commit these files to the remote Git repository. As soon as Flux "see" the new configuration in `CLUS2022-DEVWKS-2998` repository it will start deploying the application in our `dev` and `prod` environments. Let's push the changes to the repository by running the following command:
+What you have done so far is only creating a set of local YAML files to configure Flux. The next step is to commit these files to the remote Git repository. As soon as Flux "see" the new configuration in `CLEU2023-DEVWKS-2998` repository it will start deploying the application in our `dev` and `prod` environments. Let's push the changes to the repository by running the following command:
 ```bash
 git add .
 git commit -m "Deploy Chuck Norris App"
