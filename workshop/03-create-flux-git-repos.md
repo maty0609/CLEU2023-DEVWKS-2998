@@ -11,7 +11,7 @@ You will create Flux Git Repositories to expose the latest synchronized state fr
 
 You are going to create 2 Flux Source Repositories: one for `dev` environment and one for `prod` environment.
 
-Let's start with forking application repository `https://github.com/natilik/CLEU2022-DEVWKS-2998.git`. This repository will represents our application.
+Let's start with forking application repository `https://github.com/natilik/CLEU2023-DEVWKS-2998.git`. This repository will represents our application.
 
 ```bash
 cd /home/developer/src
