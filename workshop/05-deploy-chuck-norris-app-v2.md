@@ -52,6 +52,11 @@ Let’s check reconciliation:
 flux get kustomization -w
 ```
 
+We can now check if the new version has been deployed in `dev`. Because the version 1 has been replaced with version 2 we will need to re-run `kubectl port-forward` for `prod` environment. In the window where you have previously ran it or in the new window run this command:
+`kubectl port-forward service/chuck-norris-app 8091:8080 -n dev`
+
+Open or refresh Chuck Norris App in `dev` environment via this link: `https://app-8081-xxxx.devenv-testing.ap-ne-1.devnetcloud.com`.
+
 After the cluster has been reconciled we can check the new version running in `dev`. Access port `8081` and you should see our new version 2. It proves that we are now running version 2 in `dev` environment.
 
 ![Untitled](./images/chuck-norris-app-v2.png)
